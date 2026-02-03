@@ -1,0 +1,52 @@
+% thesis.tex (starting point of a UTAS thesis)
+
+% Declare overall type of document (use 12pt report class on A4 paper).
+%\documentclass[12pt,a4paper,onesided]{report}    % one-sided printing
+\documentclass[12pt,a4paper,twoside]{report}     % two-sided printing
+
+% Optional: swap margins for binding
+%\let\tmp\oddsidemargin
+%\let\oddsidemargin\evensidemargin
+%\let\evensidemargin\tmp
+%\reversemarginpar
+
+% Index support
+\makeindex
+
+% UTAS thesis style
+\usepackage{utasthesis}
+
+% Additional packages
+\usepackage{acronym}         % Automatic acronyms
+\usepackage{natbib}          % Add natbib to change the reference style
+\bibliographystyle{apalike}  % Define the reference style (change if you want a different style)
+\usepackage{hyperref}        % Enables hyper referencing (to jump to reference/figure/chapter)
+\hypersetup{hidelinks=true}  % No box around links, but hyperref still works
+
+% Included components (add more chapters/appendices as needed)
+\includeonly{
+components/prelude
+,components/newcom
+,components/acronym
+,chapters/chapter1/chapter1
+,chapters/chapter2/chapter2
+,components/app0
+,components/biby
+,components/index
+}
+
+% Begin the thesis
+\begin{document}
+
+
+\include{components/prelude}
+\include{components/newcom}
+\include{components/acronym}
+\include{chapters/chapter1/chapter1}
+\include{chapters/chapter2/chapter2}
+\include{components/app0}
+\include{components/biby}
+\include{components/index}
+
+
+\end{document}

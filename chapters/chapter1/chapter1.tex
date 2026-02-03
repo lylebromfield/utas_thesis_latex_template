@@ -1,0 +1,46 @@
+% Chapter 1 sample content
+\pagenumbering{arabic}
+
+\chapter[Introduction]{INTRODUCTION}
+\label{chap1}
+
+\section{Example section}
+Write your content here using normal \LaTeX{} commands.
+
+\newpage
+\section{Second section}
+Headers follow the last declared section on each page.
+
+\subsection{Subsection}
+Sample maths $a^2+b^2=c^2$.
+
+\subsubsection{Subsubsection}
+Acronym example: The \ac{SO} connects all ocean basins.
+
+\newpage
+Some more text to check indent and show how references work
+\cite{Williamson:STS}.
+
+Here's a figure example (Figure \ref{fig:utas}).
+\begin{figure}[hbtp]
+\begin{center}
+\scalebox{0.5}{\includegraphics{logo}}
+\caption{\label{fig:utas} UTAS logo.}
+\end{center}
+\end{figure}
+
+And finally, here's a table example (Table \ref{tab:taba}).
+\begin{table}[hbtp]
+\caption{\label{tab:taba}A simple table.}
+\begin{center}
+\begin{tabular}{|r|r|r|r|r|}
+\hline
+$n=$&2&3&4&5\\
+\hline
+$c$ (rad/day)&1.67&0.52&0.06&-0.17\\
+\hline
+period (days)&3.75&12.00&100.00&37.50\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}

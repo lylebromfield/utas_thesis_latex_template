@@ -1,0 +1,87 @@
+% prelude.tex (specification of which features in `utasthesis.sty' you
+% are using, your personal information, and your title & abstract)
+
+% Toggle front-matter components
+\titlepgtrue
+\defemptypagetrue
+\signaturepagetrue
+\copyrighttrue
+\coauthortrue
+\abswithesistrue
+\acktrue
+\tablecontentstrue
+\tablespagetrue
+\figurespagetrue
+
+\title{PLACE THESIS TITLE HERE}
+\author{Your Name}
+\prevdegrees{M.Sc. B.Sc. Hons}
+\advisor{Dr Ask Me}
+\dept{School / College / Institute (e.g., College of Sciences and Engineering)}
+\college{Optional: College / School / Institute line for title page}
+\date{}
+%\submitdate{Jan, 2000}
+
+\newcommand{\defempty}{\thispagestyle{empty}}
+
+% Example text for co-authorship declaration. Can be changed.
+\newcommand{\coauthorship}
+{\noindent The following people and institutions contributed to the publication of work undertaken as part of this thesis.\\
+
+\noindent Paper 1 / Chapter \ref{chap2}: Title of published work:
+\begin{itemize}
+\item Your Name, Candidate, University of Tasmania (e.g., 70\%)
+\item Co-author 1, Supervisor, University of Tasmania (e.g., 20\%)
+\item Co-author 2, Collaborator, External institution (e.g., 10\%)
+\end{itemize}
+
+\vspace*{1cm}
+\noindent Details of authors roles:\\
+
+\noindent Co-author 1 contributed with supervision, study design, and manuscript feedback.\\
+
+\noindent Co-author 2 contributed with data, analysis, and manuscript feedback.\\
+
+\newpage
+\thispagestyle{empty}
+\noindent We, the undersigned, agree with the above stated ``proportion of work undertaken'' for the above published and peer-reviewed manuscript contributing to this thesis:
+
+\vspace*{2cm}
+Signed: \hrulefill
+
+\hspace*{0mm}\phantom{Signed: }Name of primary supervisor
+
+\hspace*{0mm}\phantom{Signed: }Supervisor
+
+\hspace*{0mm}\phantom{Signed: }University of Tasmania
+
+\hspace*{0mm}\phantom{Signed: }School / College / Institute
+
+\hspace*{0mm}\phantom{Signed: }Date: \today
+
+\vspace*{2cm}
+Signed: \hrulefill
+
+\hspace*{0mm}\phantom{Signed: }Name of head of school/college/institute
+
+\hspace*{0mm}\phantom{Signed: }Head of School/College/Institute
+
+\hspace*{0mm}\phantom{Signed: }University of Tasmania
+
+\hspace*{0mm}\phantom{Signed: }School / College / Institute
+
+\hspace*{0mm}\phantom{Signed: }Date: \today
+}
+
+
+\newcommand{\acknowledgement}
+{Thank all your helpers/funders here.}
+
+\newcommand{\abstextwithesis}
+{Basic abstract goes here. Can use paragraphs and normal \LaTeX commands.}
+
+% Takes care of things in `utasthesis.sty' behind the scenes.
+% Basically just does a check of all the fields that have been activated
+% above and fills out the appropriate pages and adds them to the thesis.
+\beforepreface
+\afterpreface

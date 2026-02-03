@@ -1,34 +1,33 @@
-# UTasIMAS_PhDThesis_Template
-A Latex template for a PhD thesis at the Institute for Marine and Antarctic Studies at the University of Tasmania.
+# UTAS Thesis LaTeX Template
 
-This template is a slightly modified version provided by
+A LaTeX template for higher-degree research theses at the University of Tasmania. This is a cleaned and generalized version of the earlier IMAS-focused template.
 
-https://github.com/mdsumner/utas_latex_thesis
+## Origin
 
-Please, check the link for help setting up the template.
+Adapted from https://github.com/mdsumner/utas_latex_thesis with general UTAS wording and a slimmer file set. Forked from https://github.com/wghuneke/UTasIMAS_PhDThesis_Template, which slightly tweaked the mdsumner version for IMAS.
 
-Change I performed are
-- adaptation for IMAS requirements
-- adding an acronym file
-- adding a layout for a co-authorship page
-- changes to the layout / adding an empty page after the title page
+## Key files
 
-Quick overview on the template:
+- `thesis.tex`: main document; controls which component files are included.
+- `utasthesis.sty`: layout and formatting (margins, headers/footers, front matter flow).
+- `components/prelude.tex`: candidate metadata (title, author, department/college), abstract, acknowledgements, and optional co-authorship statement.
 
-The three files thesis_ex.tex, imasphdthesis.sty, and prelude.tex are important for the overall layout.
+## Typical structure
 
-thesis_ex.tex
-- main file in which you specifiy which files to include
+- `components/newcom.tex`: your custom commands.
+- `components/acronym.tex`: list of acronyms.
+- `chapters/chapter1/chapter1.tex`, `chapters/chapter2/chapter2.tex`: starter chapter files (copy/rename to add more).
+- `components/app0.tex`: switches to appendix mode; add your appendix files after it.
+- `components/biby.tex`: bibliography include.
+- `components/index.tex`: index include (enable in `thesis.tex` if you need an index).
 
-imasphdthesis.sty
-- to change the layout of the thesis (e.g. margins)
+## Notes
 
-prelude.tex
-- add information for title page
-- add abstract text
-- add acknowledgements
-- add info on co-autorship (if applicable)
-
-The actual thesis text is to be written in the chapter files (chap1.tex, etc).
+- Edit `components/prelude.tex` to set your department/college and thesis metadata.
+- Update or remove the co-authorship section in `components/prelude.tex` as appropriate.
+- Replace `logo.png` with an appropriate UTAS/college logo if required.
+- `thesis.tex` currently includes chapters/chapter1/chapter1, chapters/chapter2/chapter2, components/app0, components/biby, and components/index; add more includes as you create chapters/appendices, and use `\\includeonly{...}` to speed compilation during drafting.
+- Each chapter lives under its own folder in `chapters/` and can keep figures in a per-chapter `figures/` subfolder to avoid clutter.
+- Default packages include `acronym`, `natbib`, and `hyperref` (with hidden links).
 
 Happy writing!
